@@ -3,9 +3,11 @@ Umbraco CMS
 Umbraco is a free open source Content Management System built on the ASP.NET platform.
 
 ## Building Umbraco from source ##
-The easiest way to get started is to run `build/build.bat` which will build both the backoffice (also known as "Belle") and the Umbraco core. You can then easily start debugging from Visual Studio, or if you need to debug Belle you can run `grunt dev` in `src\Umbraco.Web.UI.Client`.
+The easiest way to get started is to run `build/build.bat` which will build both the backoffice (also known as "Belle") and the Umbraco core. You can then easily start debugging from Visual Studio, or if you need to debug Belle you can run `grunt vs` in `src\Umbraco.Web.UI.Client`.
  
-If you're interested in making changes to Belle make sure to read the [Belle ReadMe file](src/Umbraco.Web.UI.Client/README.md). Note that you can always [download a nightly build](http://nightly.umbraco.org/umbraco%207.0.0/) so you don't have to build the code yourself.
+If you're interested in making changes to Belle without running Visual Studio make sure to read the [Belle ReadMe file](src/Umbraco.Web.UI.Client/README.md). 
+
+Note that you can always [download a nightly build](https://ci.appveyor.com/project/Umbraco/umbraco-cms-hs8dx/history/branch/dev-v7) so you don't have to build the code yourself.
 
 ## Watch a introduction video ##
 
@@ -13,11 +15,11 @@ If you're interested in making changes to Belle make sure to read the [Belle Rea
 
 ## Umbraco - the simple, flexible and friendly ASP.NET CMS ##
 
-**More than 177,000 sites trust Umbraco** 
+**More than 350,000 sites trust Umbraco** 
 
 For the first time on the Microsoft platform, there is a free user and developer friendly CMS that makes it quick and easy to create websites - or a breeze to build complex web applications. Umbraco has award-winning integration capabilities and supports ASP.NET MVC or Web Forms, including User and Custom Controls, out of the box. It's a developer's dream and your users will love it too. 
 
-Used by more than 177,000 active websites including [http://daviscup.com](http://daviscup.com), [http://heinz.com](http://heinz.com), [http://peugeot.com](http://peugeot.com), [http://www.hersheys.com/](http://www.hersheys.com/) and **The Official ASP.NET and IIS.NET website from Microsoft** ([http://asp.net](http://asp.net) / [http://iis.net](http://iis.net)), you can be sure that the technology is proven, stable and scales.  
+Used by more than 350,000 active websites including [http://daviscup.com](http://daviscup.com), [http://heinz.com](http://heinz.com), [http://peugeot.com](http://peugeot.com), [http://www.hersheys.com/](http://www.hersheys.com/) and **The Official ASP.NET and IIS.NET website from Microsoft** ([http://asp.net](http://asp.net) / [http://iis.net](http://iis.net)), you can be sure that the technology is proven, stable and scales.  
 
 To view more examples, please visit [http://umbraco.com/why-umbraco/#caseStudies](http://umbraco.com/why-umbraco/#caseStudies)
 

@@ -26,9 +26,8 @@ namespace Umbraco.Core.Security
             MembershipProviderBase membershipProvider)
             : base(store)
         {
-            if (options == null) throw new ArgumentNullException("options");
-            var manager = new BackOfficeUserManager(store);
-            InitUserManager(manager, membershipProvider, options);
+            if (options == null) throw new ArgumentNullException("options");;
+            InitUserManager(this, membershipProvider, options);
         }
 
         #region Static Create methods
@@ -118,6 +117,8 @@ namespace Umbraco.Core.Security
             //custom identity factory for creating the identity object for which we auth against in the back office
             manager.ClaimsIdentityFactory = new BackOfficeClaimsIdentityFactory();
 
+            manager.EmailService = new EmailService();
+            
             //NOTE: Not implementing these, if people need custom 2 factor auth, they'll need to implement their own UserStore to suport it
 
             //// Register two factor authentication providers. This application uses Phone and Emails as a step of receiving a code for verifying the user
@@ -132,7 +133,6 @@ namespace Umbraco.Core.Security
             //    BodyFormat = "Your security code is: {0}"
             //});
 
-            //manager.EmailService = new EmailService();
             //manager.SmsService = new SmsService();            
         }
 
@@ -199,7 +199,7 @@ namespace Umbraco.Core.Security
         /// We've allowed this check to be overridden with a simple callback so that developers don't actually
         /// have to implement/override this class.
         /// </remarks>
-        public async override Task<bool> CheckPasswordAsync(T user, string password)
+        public override async Task<bool> CheckPasswordAsync(T user, string password)
         {
             if (BackOfficeUserPasswordChecker != null)
             {
